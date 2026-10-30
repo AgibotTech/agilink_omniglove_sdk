@@ -1,0 +1,12 @@
+bool mapped
+uint32 components
+uint32 device_tick_ms
+PoseNode thumb
+PoseNode index
+PoseNode middle
+PoseNode ring
+PoseNode pinky
+PoseNode wrist
+PoseImu back_of_hand_imu
+TactileData tactile
+uint8[] unmapped_data

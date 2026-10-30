@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Agibot Co., Ltd.
+# Omniglove SDK is licensed under Mulan PSL v2.
+# SPDX-License-Identifier: MulanPSL-2.0
+
+set(PACKAGE_VERSION "1.0.0")
+
+if(PACKAGE_FIND_VERSION VERSION_GREATER PACKAGE_VERSION)
+    set(PACKAGE_VERSION_COMPATIBLE FALSE)
+else()
+    set(PACKAGE_VERSION_COMPATIBLE TRUE)
+    if(PACKAGE_FIND_VERSION VERSION_EQUAL PACKAGE_VERSION)
+        set(PACKAGE_VERSION_EXACT TRUE)
+    endif()
+endif()

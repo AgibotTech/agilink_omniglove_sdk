@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/PostThumbLandmarks.msg
+// generated code does not contain a copyright notice
+
+#include "omniglove_interfaces/msg/Pose6.idl"
+
+module omniglove_interfaces {
+  module msg {
+    struct PostThumbLandmarks {
+      omniglove_interfaces::msg::Pose6 cmc;
+
+      omniglove_interfaces::msg::Pose6 mcp;
+
+      omniglove_interfaces::msg::Pose6 ip;
+
+      omniglove_interfaces::msg::Pose6 tip;
+    };
+  };
+};

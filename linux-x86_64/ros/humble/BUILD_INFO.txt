@@ -1,0 +1,4 @@
+ros_distro=humble
+architecture=x86_64
+sdk_version=1.0.0
+sdk_prefix=/usr/local

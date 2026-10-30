@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/PoseEmf.msg
+// generated code does not contain a copyright notice
+
+
+module omniglove_interfaces {
+  module msg {
+    typedef int16 int16__3[3];
+    struct PoseEmf {
+      int16__3 position_mm;
+
+      int16__3 yaw_pitch_roll_cdeg;
+
+      uint16 confidence_milli;
+
+      boolean valid;
+    };
+  };
+};

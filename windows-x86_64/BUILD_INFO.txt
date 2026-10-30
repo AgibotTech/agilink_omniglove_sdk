@@ -1,0 +1,9 @@
+platform=windows-x86_64
+sdk_version=1.0.0
+abi_version=6.0.0
+library=bin/omniglove.dll
+import_library=lib/omniglove.lib
+ota_tool=bin/omniglove_ota_tool.exe
+build_type=Release
+compiler=MSVC 19.44.35229.0
+cmake=cmake version 4.4.4

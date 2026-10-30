@@ -1,0 +1,14 @@
+# Release artifacts are checksummed byte-for-byte. Keep binaries untouched and
+# make every known text format reproduce the same bytes on every platform.
+* -text
+*.bat text eol=crlf
+*.c text eol=lf
+*.cmake text eol=lf
+*.h text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.txt text eol=lf
+CMakeLists.txt text eol=lf
+SHA256SUMS text eol=lf
+VERSION text eol=lf
+windows-*/BUILD_INFO.txt text eol=crlf

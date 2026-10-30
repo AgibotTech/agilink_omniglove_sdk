@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from omniglove_interfaces/srv/ListDevices.srv
+// generated code does not contain a copyright notice
+
+#include "omniglove_interfaces/msg/DeviceInfo.idl"
+
+module omniglove_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Copyright 2026 Agibot. SPDX-License-Identifier: MulanPSL-2.0")
+    struct ListDevices_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct ListDevices_Response {
+      sequence<omniglove_interfaces::msg::DeviceInfo> devices;
+    };
+  };
+};

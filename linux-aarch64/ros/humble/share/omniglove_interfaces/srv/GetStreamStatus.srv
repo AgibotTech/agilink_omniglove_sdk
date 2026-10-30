@@ -1,0 +1,28 @@
+# Copyright 2026 Agibot. SPDX-License-Identifier: MulanPSL-2.0
+
+uint64 device_uid
+uint8 stream_kind
+---
+bool success
+uint32 stream_error
+uint32 state
+uint32 stream_mode
+bool enabled
+uint32 source_interval_ms
+uint32 source_timeout_ms
+uint32 callback_queue_capacity
+uint32 pose_components
+uint64 actual_source_rate_millihz
+uint64 source_events
+uint64 source_samples
+uint64 source_no_data
+uint64 source_timeouts
+uint64 source_errors
+uint64 callback_delivered
+uint64 callback_dropped_full
+uint64 callback_discontinuities
+uint64 callback_queue_high_watermark
+uint64 last_source_sequence
+uint64 last_delivered_sequence
+uint32 last_source_status
+string message

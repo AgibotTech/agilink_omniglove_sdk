@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/PoseData.msg
+// generated code does not contain a copyright notice
+
+#include "omniglove_interfaces/msg/PoseImu.idl"
+#include "omniglove_interfaces/msg/PoseNode.idl"
+#include "omniglove_interfaces/msg/TactileData.idl"
+
+module omniglove_interfaces {
+  module msg {
+    struct PoseData {
+      boolean mapped;
+
+      uint32 components;
+
+      uint32 device_tick_ms;
+
+      omniglove_interfaces::msg::PoseNode thumb;
+
+      omniglove_interfaces::msg::PoseNode index;
+
+      omniglove_interfaces::msg::PoseNode middle;
+
+      omniglove_interfaces::msg::PoseNode ring;
+
+      omniglove_interfaces::msg::PoseNode pinky;
+
+      omniglove_interfaces::msg::PoseNode wrist;
+
+      omniglove_interfaces::msg::PoseImu back_of_hand_imu;
+
+      omniglove_interfaces::msg::TactileData tactile;
+
+      sequence<uint8> unmapped_data;
+    };
+  };
+};

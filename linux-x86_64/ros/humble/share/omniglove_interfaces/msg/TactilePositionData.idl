@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/TactilePositionData.msg
+// generated code does not contain a copyright notice
+
+#include "omniglove_interfaces/msg/TactilePointPosition.idl"
+
+module omniglove_interfaces {
+  module msg {
+    module TactilePositionData_Constants {
+      const uint32 FRAME_WRIST = 1;
+      const uint32 UNIT_METER = 1;
+    };
+    @verbatim (language="comment", text=
+      "Copyright 2026 Agibot. SPDX-License-Identifier: MulanPSL-2.0")
+    struct TactilePositionData {
+      uint32 count;
+
+      uint32 coordinate_frame;
+
+      uint32 unit;
+
+      sequence<omniglove_interfaces::msg::TactilePointPosition> points;
+    };
+  };
+};

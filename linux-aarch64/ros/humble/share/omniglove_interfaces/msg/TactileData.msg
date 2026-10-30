@@ -1,0 +1,9 @@
+bool mapped
+uint32 count
+TactileFinger thumb
+TactileFinger index
+TactileFinger middle
+TactileFinger ring
+TactileFinger pinky
+TactileRegion palm_surface
+uint8[] unmapped_data

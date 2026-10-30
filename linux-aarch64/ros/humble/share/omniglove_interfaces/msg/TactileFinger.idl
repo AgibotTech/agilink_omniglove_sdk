@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/TactileFinger.msg
+// generated code does not contain a copyright notice
+
+#include "omniglove_interfaces/msg/TactileRegion.idl"
+
+module omniglove_interfaces {
+  module msg {
+    struct TactileFinger {
+      omniglove_interfaces::msg::TactileRegion tip;
+
+      omniglove_interfaces::msg::TactileRegion pad;
+
+      omniglove_interfaces::msg::TactileRegion middle;
+
+      omniglove_interfaces::msg::TactileRegion root;
+    };
+  };
+};

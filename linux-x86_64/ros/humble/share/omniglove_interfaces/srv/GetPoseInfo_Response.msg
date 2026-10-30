@@ -1,0 +1,15 @@
+
+bool success
+uint32 control_status
+uint32 return_code
+uint32 device_error_code
+uint64 request_id
+uint64 connection_generation
+uint32 protocol_sequence
+uint32 node_count
+uint8 hand
+uint32 nominal_source_rate_hz
+uint32 calibration_state
+uint32 max_distance_mm
+uint32 capability_flags
+string message
