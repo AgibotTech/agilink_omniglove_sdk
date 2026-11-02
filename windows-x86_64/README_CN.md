@@ -65,8 +65,9 @@ cmake --build ./build/omniglove-c-consumer
 让示例脱离已安装 SDK 后仍能独立运行；正常执行过
 `install.bat` 的开发机已经通过系统 `PATH` 提供 DLL，用户项目不需要手工复制文件。
 
-连接手套后，将上述路径中的 `c_consumer` 替换为 `firmware_info`，即可构建并运行只读固件
-信息示例；它会输出每只手套的手别、固件与硬件版本、产品名和设备 SN。
+Windows 包不提供预编译设备信息工具。连接手套后，将上述路径中的 `c_consumer` 替换为
+`firmware_info`，即可构建并运行只读固件信息示例；它会输出每只手套的手别、固件与硬件
+版本、产品名和设备 SN。
 
 ### 3. 在业务工程中链接 SDK
 

@@ -1,4 +1,6 @@
 ros_distro=humble
 architecture=aarch64
 sdk_version=1.0.0
+sdk_abi_version=6.0.0
+sdk_soname=libomniglove.so.6
 sdk_prefix=/usr/local

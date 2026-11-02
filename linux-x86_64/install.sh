@@ -20,6 +20,7 @@ fi
 
 if [[ ! -f "$package_root/lib/libomniglove.so.6.0.0" ||
       ! -f "$package_root/lib/omniglove/libusb-1.0.so.0.6.0" ||
+      ! -f "$package_root/bin/omniglove_firmware_info" ||
       ! -f "$package_root/bin/omniglove_calibration_tool" ||
       ! -f "$package_root/bin/omniglove_calibration_urdf_tool" ||
       ! -f "$package_root/bin/omniglove_bone_deploy_tool" ||
@@ -66,6 +67,8 @@ fi
     "$prefix/lib/libomniglove.so.6.0.0"
 "${as_root[@]}" install -m 0755 "$package_root/lib/omniglove/libusb-1.0.so.0.6.0" \
     "$prefix/lib/omniglove/libusb-1.0.so.0.6.0"
+"${as_root[@]}" install -m 0755 "$package_root/bin/omniglove_firmware_info" \
+    "$prefix/bin/omniglove_firmware_info"
 "${as_root[@]}" install -m 0755 "$package_root/bin/omniglove_calibration_tool" \
     "$prefix/bin/omniglove_calibration_tool"
 "${as_root[@]}" install -m 0755 "$package_root/bin/omniglove_calibration_urdf_tool" \
@@ -91,4 +94,4 @@ fi
 
 printf 'Installed Omniglove SDK %s to %s\n' "$sdk_version" "$prefix"
 printf 'CMake package: %s\n' "$prefix/lib/cmake/OmnigloveSDK"
-printf 'Calibration, teleop, and OTA tools: %s\n' "$prefix/bin"
+printf 'Firmware information, calibration, teleop, and OTA tools: %s\n' "$prefix/bin"

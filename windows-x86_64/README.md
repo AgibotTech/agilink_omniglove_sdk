@@ -23,7 +23,7 @@ system environment.
 windows-x86_64/
 ├── README.md / README_CN.md
 ├── BUILD_INFO.txt
-├── bin/                        omniglove.dll, libusb-1.0.dll, OTA tool
+├── bin/                        runtime DLLs and OTA tool
 ├── lib/omniglove.lib
 ├── include/omniglove/omniglove.h
 ├── cmake/
@@ -69,6 +69,12 @@ omniglove_sdk_deploy_runtime(my_app)
 ```
 
 This copies `omniglove.dll` and `libusb-1.0.dll` beside the executable.
+
+## Firmware information example
+
+The package does not ship a prebuilt Windows firmware information tool. The
+read-only public-API example remains under `examples/firmware_info`; build it
+with the same CMake workflow as `examples/c_consumer` when needed.
 
 ## Uninstall
 

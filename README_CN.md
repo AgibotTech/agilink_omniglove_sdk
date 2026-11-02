@@ -102,6 +102,18 @@ cmake --build ./build/omniglove-consumer
 - [IK 解算数据描述](docs/cn/IK_DATA_DESCRIPTION.md) /
   [触觉点位映射图片](docs/cn/TACTILE_POINT_MAPPING_IMAGES.md)。
 
+## 只读设备信息查询
+
+Linux 包提供无需编译即可运行的只读工具：
+
+```bash
+# 在 linux-<arch>/ 目录
+./bin/omniglove_firmware_info
+```
+
+工具通过公开 API 输出每只设备的左右手、固件与硬件版本、产品名和设备 SN，不写设备。
+Windows 包保留同源 `examples/firmware_info` 公开 API 示例，但不提供预编译设备信息程序。
+
 ## 发行校验
 
 Linux/macOS 或 Git for Windows 环境可在发行根目录执行：
