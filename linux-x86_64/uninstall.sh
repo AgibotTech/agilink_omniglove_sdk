@@ -26,6 +26,7 @@ if [[ ! -w "$write_probe" ]]; then
 fi
 
 "${as_root[@]}" rm -f \
+    "$prefix/bin/omniglove_firmware_info" \
     "$prefix/bin/omniglove_calibration_tool" \
     "$prefix/bin/omniglove_calibration_urdf_tool" \
     "$prefix/bin/omniglove_bone_deploy_tool" \

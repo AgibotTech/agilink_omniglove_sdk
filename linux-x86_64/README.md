@@ -11,7 +11,7 @@ documents, versions, licenses, and repository checksums are at the release root.
 linux-<arch>/
 ├── README.md / README_CN.md
 ├── BUILD_INFO.txt
-├── bin/                        calibration, teleop, and OTA tools
+├── bin/                        firmware info, calibration, teleop, and OTA tools
 ├── include/omniglove/          public C ABI header
 ├── lib/                        SDK and bundled runtime libraries
 ├── cmake/                      OmnigloveSDK package
@@ -71,12 +71,16 @@ libraries do not overwrite system libraries.
 After installing permissions and reconnecting a glove:
 
 ```bash
+./bin/omniglove_firmware_info
 ./scripts/run_glove_demo.sh
 ```
 
+The prebuilt firmware information tool is read-only and prints each glove's
+hand, firmware and hardware versions, product name, and device serial number.
 The helper builds and runs `examples/glove_live` through the public C API. The
-firmware information and C++ acceptance examples can be built from their own
-directories. Consult their `--help` output and use the package's CMake directory.
+same firmware information source and the C++ acceptance example remain under
+`examples/` for SDK development. Consult their `--help` output and use the
+package's CMake directory.
 
 ## Calibration
 

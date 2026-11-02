@@ -89,6 +89,20 @@ Windows documentation:
   [stream](docs/en/STREAM_DATA_V1.md), and
   [tactile](docs/en/TACTILE_LAYOUT_V1.md) contracts.
 
+## Read-only firmware information
+
+Linux packages provide a prebuilt public-API tool:
+
+```bash
+# From linux-<arch>/
+./bin/omniglove_firmware_info
+```
+
+It reports each device's hand, firmware and hardware versions, product name,
+and device serial number without writing the device. Windows packages retain
+the same public-API source under `examples/firmware_info`, but do not ship a
+prebuilt firmware information executable.
+
 ## Native PowerShell checksum verification
 
 ```powershell

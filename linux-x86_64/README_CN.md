@@ -13,7 +13,7 @@ linux-<arch>/
 ├── README.md                    默认英文入口
 ├── README_CN.md                 中文入口
 ├── BUILD_INFO.txt
-├── bin/                        标定、O10 遥操和 OTA 工具
+├── bin/                        设备信息、标定、遥操和 OTA 工具
 ├── include/                    本平台公开 C ABI 头文件
 ├── lib/                        SDK 和随包运行库
 ├── cmake/                      CMake package
@@ -44,7 +44,7 @@ Linux 公开库的版本信息见 `BUILD_INFO.txt`。随包运行库位于 `lib/
 ```
 
 安装脚本会部署头文件、Omniglove 与 libusb 动态库、SONAME 软链接、CMake package、
-calibration、teleop 和 OTA CLI。默认路径会自动运行 `ldconfig`；用户目录不需要 root。通过
+设备信息、calibration、teleop 和 OTA CLI。默认路径会自动运行 `ldconfig`；用户目录不需要 root。通过
 CMake target 构建的程序会记录该动态库路径；手工启动其他程序时可配置系统 loader 或
 `LD_LIBRARY_PATH`。
 
@@ -72,9 +72,16 @@ cmake --build build/omniglove_consumer
 输出包含运行库报告的 ABI。该示例同时验证平台目录中的公开头文件、CMake package、
 动态链接和 ABI 兼容性检查。
 
-### 4. 构建 C++ API 示例
+### 4. 查询设备信息与构建 C++ API 示例
 
-连接手套后，可先运行纯 C 固件信息示例；它只调用公开 API，不写设备：
+连接手套后可直接运行预编译的只读工具，无需编写或编译代码：
+
+```bash
+./bin/omniglove_firmware_info
+```
+
+输出包含每只设备的左右手、固件与硬件版本、产品名和设备 SN。需要基于 SDK 继续开发时，
+同源纯 C 示例仍保留在 `examples/firmware_info`：
 
 ```bash
 cmake -S examples/firmware_info -B build/firmware_info \
@@ -82,8 +89,6 @@ cmake -S examples/firmware_info -B build/firmware_info \
 cmake --build build/firmware_info
 ./build/firmware_info/omniglove_firmware_info
 ```
-
-输出包含每只设备的左右手、固件与硬件版本、产品名和设备 SN。
 
 `cpp_acceptance_demo` 使用 C++17 编写，只包含公开的
 `omniglove/omniglove.h` 并调用稳定 C API。构建该

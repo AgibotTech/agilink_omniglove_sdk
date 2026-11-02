@@ -4,6 +4,7 @@ abi_version=6.0.0
 library=libomniglove.so.6.0.0
 soname=libomniglove.so.6
 build_type=Release
+firmware_info_tool=omniglove_firmware_info
 calibration_tools=omniglove_calibration_tool,omniglove_calibration_urdf_tool,omniglove_bone_deploy_tool
 teleop_tool=omniglove_teleop_tool
 ota_tool=omniglove_ota_tool
