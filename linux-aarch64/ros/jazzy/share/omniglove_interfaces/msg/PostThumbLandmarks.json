@@ -1,0 +1,86 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "omniglove_interfaces/msg/PostThumbLandmarks",
+      "fields": [
+        {
+          "name": "cmc",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/Pose6"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "mcp",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/Pose6"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "ip",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/Pose6"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "tip",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/Pose6"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "omniglove_interfaces/msg/Pose6",
+        "fields": [
+          {
+            "name": "position_m",
+            "type": {
+              "type_id": 58,
+              "capacity": 3,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "quaternion_xyzw",
+            "type": {
+              "type_id": 58,
+              "capacity": 4,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "omniglove_interfaces/msg/PostThumbLandmarks",
+      "hash_string": "RIHS01_ac482d8ea13dfb65359d7a032817d3fccbe716c4d88ccb263ccfd47d359e3fe7"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/Pose6",
+      "hash_string": "RIHS01_3e39efc8d5c0bd8cfdcaee6aafc300e2de628f3474367f1cdbb0aef38b816c49"
+    }
+  ]
+}

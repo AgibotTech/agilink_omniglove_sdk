@@ -1,0 +1,47 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from omniglove_interfaces/srv/SetStreamConfig.srv
+// generated code does not contain a copyright notice
+
+
+module omniglove_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Copyright 2026 Agibot. SPDX-License-Identifier: MulanPSL-2.0")
+    struct SetStreamConfig_Request {
+      uint64 device_uid;
+
+      uint8 stream_kind;
+
+      uint32 stream_mode;
+
+      boolean enabled;
+
+      uint32 source_interval_ms;
+
+      uint32 source_timeout_ms;
+
+      uint32 callback_queue_capacity;
+
+      uint32 pose_components;
+    };
+    struct SetStreamConfig_Response {
+      boolean success;
+
+      uint32 stream_error;
+
+      uint32 stream_mode;
+
+      boolean enabled;
+
+      uint32 source_interval_ms;
+
+      uint32 source_timeout_ms;
+
+      uint32 callback_queue_capacity;
+
+      uint32 pose_components;
+
+      string message;
+    };
+  };
+};

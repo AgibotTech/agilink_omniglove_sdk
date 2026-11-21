@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/ImuRawSample.msg
+// generated code does not contain a copyright notice
+
+
+module omniglove_interfaces {
+  module msg {
+    typedef int16 int16__6[6];
+    struct ImuRawSample {
+      int16__6 axes;
+    };
+  };
+};

@@ -1,0 +1,56 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "omniglove_interfaces/msg/PoseEmf",
+      "fields": [
+        {
+          "name": "position_mm",
+          "type": {
+            "type_id": 52,
+            "capacity": 3,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "yaw_pitch_roll_cdeg",
+          "type": {
+            "type_id": 52,
+            "capacity": 3,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "confidence_milli",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "valid",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "omniglove_interfaces/msg/PoseEmf",
+      "hash_string": "RIHS01_6fe29f46d7cc82161748bf6a252aba64fd69dd525562b99c7bc8223bbcb571a8"
+    }
+  ]
+}

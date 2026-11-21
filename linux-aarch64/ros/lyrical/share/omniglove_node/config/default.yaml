@@ -1,0 +1,29 @@
+omniglove_node:
+  ros__parameters:
+    autostart: true
+    topic_root: omniglove
+    # Omit device_uids to select every discovered device. ROS 2 cannot infer
+    # the element type of an empty YAML sequence.
+    # device_uids: ['0x0123456789abcdef']
+    discovery_retry_ms: 1000
+    control_timeout_ms: 500
+
+    qos:
+      depth: 10
+      reliability: best_effort
+
+    streams:
+      posedata:
+        enabled: true
+        stream_mode: 0
+        source_interval_ms: 50
+        source_timeout_ms: 100
+        callback_queue_capacity: 64
+        # bit0 tactile, bit1 pose; 3 requests both synchronized sections.
+        pose_components: 3
+      postdata:
+        enabled: false
+        stream_mode: 0
+        source_interval_ms: 10
+        source_timeout_ms: 100
+        callback_queue_capacity: 64

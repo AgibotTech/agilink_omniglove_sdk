@@ -1,0 +1,4 @@
+float32 mcp_abduction
+float32 mcp_flexion
+float32 pip_flexion
+float32 dip_flexion

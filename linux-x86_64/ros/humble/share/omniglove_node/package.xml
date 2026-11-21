@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>omniglove_node</name>
+  <version>0.1.0</version>
+  <description>Lifecycle ROS 2 wrapper for the Omniglove SDK.</description>
+  <maintainer email="huangruiqi@agibot.com">agiuser</maintainer>
+  <license>MulanPSL-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <depend>lifecycle_msgs</depend>
+  <depend>rcl_interfaces</depend>
+  <depend>std_msgs</depend>
+  <depend>omniglove_interfaces</depend>
+  <depend>rclcpp_components</depend>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,40 @@
+BodyParts3D attribution and modification notice
+================================================
+
+This package contains transformed visual meshes derived from BodyParts3D.
+
+Required attribution preserved from the downloaded OBJ file headers:
+
+  BodyParts3D, (c) The Database Center for Life Science, licensed under
+  Creative Commons Attribution-Share Alike 2.1 Japan.
+
+License information referenced by those source files:
+
+  http://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+
+Source material:
+
+  BodyParts3D 4.0 OBJ hand-bone parts, selected and assembled in
+  D:\OG\BP3D_hand_assembler. The exact source-file mapping and source hashes
+  are recorded in retarget_report.json and in every generated OBJ header.
+
+Modifications:
+
+  The source meshes were translated, properly rotated (no reflection), and
+  scaled along anatomical longitudinal/transverse axes to match the existing
+  OmniGlove URDF link frames and segment lengths. Meshes were re-exported as
+  triangulated OBJ files in metres. OmniGlove kinematic joint definitions were
+  retained and are not BodyParts3D data.
+
+  2026-09-28 v3-rollfix: corrected each long bone's palm/dorsum orientation
+  with a proper 180-degree rotation about its own longitudinal axis.
+
+Distribution note:
+
+  Preserve this attribution, the modification notice, and the applicable
+  share-alike terms when redistributing the derived mesh assets. The source
+  website may currently show a newer CC BY notice, but this package retains
+  the more conservative CC BY-SA 2.1 Japan notice embedded in the downloaded
+  source files unless the rights holder provides written clarification.
+
+This notice is informational and is not legal advice.

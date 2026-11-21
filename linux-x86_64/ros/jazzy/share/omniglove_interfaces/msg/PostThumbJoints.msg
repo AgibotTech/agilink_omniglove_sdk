@@ -1,0 +1,5 @@
+float32 cmc_rotation
+float32 cmc_abduction
+float32 cmc_flexion
+float32 mcp_flexion
+float32 ip_flexion

@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "omniglove_interfaces/msg/PoseImu",
+      "fields": [
+        {
+          "name": "roll_pitch_yaw_cdeg",
+          "type": {
+            "type_id": 52,
+            "capacity": 3,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "flags",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "omniglove_interfaces/msg/PoseImu",
+      "hash_string": "RIHS01_9358fc9c49eead2f17b15ecba2c2bd185490e8774717ca5e0454752fe4d43f3d"
+    }
+  ]
+}

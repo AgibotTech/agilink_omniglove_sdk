@@ -1,0 +1,15 @@
+.vscode/
+tmp/
+*.swp
+*/__pycache__/
+.clangd/
+.cache/
+build/
+build-libserial/
+ros2/install/
+ros2/log/
+calibration-output*/
+**.pyc
+**.o
+compile_commands.json
+.clang-format

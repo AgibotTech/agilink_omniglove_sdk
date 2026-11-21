@@ -1,0 +1,42 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/StreamMetadata.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module omniglove_interfaces {
+  module msg {
+    module StreamMetadata_Constants {
+      const uint8 HAND_UNKNOWN = 0;
+      const uint8 HAND_LEFT = 1;
+      const uint8 HAND_RIGHT = 2;
+      const uint32 SOURCE_DEVICE_ID_OPAQUE_TOKEN_HASH = 1;
+      const uint32 DEVICE_SEQUENCE_VALID = 2;
+    };
+    @verbatim (language="comment", text=
+      "Copyright 2026 Agibot. SPDX-License-Identifier: MulanPSL-2.0")
+    struct StreamMetadata {
+      std_msgs::msg::Header header;
+
+      uint8 hand;
+
+      uint32 flags;
+
+      uint32 layout_version;
+
+      uint32 device_sequence;
+
+      uint64 device_uid;
+
+      uint64 source_device_id;
+
+      uint64 connection_generation;
+
+      uint64 source_sequence;
+
+      uint64 sample_monotonic_ns;
+
+      uint64 gap_count;
+    };
+  };
+};

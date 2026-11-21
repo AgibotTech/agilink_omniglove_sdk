@@ -1,0 +1,12 @@
+bool mapped
+uint32 device_tick_ms
+uint32 flags
+uint8 reserved
+uint32 frame_id
+PostThumb thumb
+PostFinger index
+PostFinger middle
+PostFinger ring
+PostFinger pinky
+PostWrist wrist
+uint8[] unmapped_data

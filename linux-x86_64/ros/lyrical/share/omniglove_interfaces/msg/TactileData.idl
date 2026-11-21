@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/TactileData.msg
+// generated code does not contain a copyright notice
+
+#include "omniglove_interfaces/msg/TactileFinger.idl"
+#include "omniglove_interfaces/msg/TactileRegion.idl"
+
+module omniglove_interfaces {
+  module msg {
+    struct TactileData {
+      boolean mapped;
+
+      uint32 count;
+
+      omniglove_interfaces::msg::TactileFinger thumb;
+
+      omniglove_interfaces::msg::TactileFinger index;
+
+      omniglove_interfaces::msg::TactileFinger middle;
+
+      omniglove_interfaces::msg::TactileFinger ring;
+
+      omniglove_interfaces::msg::TactileFinger pinky;
+
+      omniglove_interfaces::msg::TactileRegion palm_surface;
+
+      sequence<uint8> unmapped_data;
+    };
+  };
+};

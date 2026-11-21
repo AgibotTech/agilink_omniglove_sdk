@@ -1,0 +1,431 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "omniglove_interfaces/msg/PoseData",
+      "fields": [
+        {
+          "name": "mapped",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "components",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "device_tick_ms",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "thumb",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/PoseNode"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "index",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/PoseNode"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "middle",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/PoseNode"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "ring",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/PoseNode"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "pinky",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/PoseNode"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "wrist",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/PoseNode"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "back_of_hand_imu",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/PoseImu"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "tactile",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/TactileData"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "unmapped_data",
+          "type": {
+            "type_id": 147,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "omniglove_interfaces/msg/PoseEmf",
+        "fields": [
+          {
+            "name": "position_mm",
+            "type": {
+              "type_id": 52,
+              "capacity": 3,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "yaw_pitch_roll_cdeg",
+            "type": {
+              "type_id": 52,
+              "capacity": 3,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "confidence_milli",
+            "type": {
+              "type_id": 5,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "valid",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "omniglove_interfaces/msg/PoseImu",
+        "fields": [
+          {
+            "name": "roll_pitch_yaw_cdeg",
+            "type": {
+              "type_id": 52,
+              "capacity": 3,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "flags",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "omniglove_interfaces/msg/PoseNode",
+        "fields": [
+          {
+            "name": "emf",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/PoseEmf"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "imu",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/PoseImu"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "omniglove_interfaces/msg/TactileData",
+        "fields": [
+          {
+            "name": "mapped",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "count",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "thumb",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileFinger"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "index",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileFinger"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "middle",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileFinger"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "ring",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileFinger"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "pinky",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileFinger"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "palm_surface",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileRegion"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "unmapped_data",
+            "type": {
+              "type_id": 147,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "omniglove_interfaces/msg/TactileFinger",
+        "fields": [
+          {
+            "name": "tip",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileRegion"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "pad",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileRegion"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "middle",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileRegion"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "root",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/TactileRegion"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "omniglove_interfaces/msg/TactileRegion",
+        "fields": [
+          {
+            "name": "rows",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "columns",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "data",
+            "type": {
+              "type_id": 147,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "omniglove_interfaces/msg/PoseData",
+      "hash_string": "RIHS01_242957f8f333258f1ff826a46feca946521c13fb0b56cfdec8eef30a5bcc24d8"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/PoseEmf",
+      "hash_string": "RIHS01_6fe29f46d7cc82161748bf6a252aba64fd69dd525562b99c7bc8223bbcb571a8"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/PoseImu",
+      "hash_string": "RIHS01_9358fc9c49eead2f17b15ecba2c2bd185490e8774717ca5e0454752fe4d43f3d"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/PoseNode",
+      "hash_string": "RIHS01_718c18d1be1bf7c3649cbe5d31a51c9f5abd24554e739a6f1458895f838efa06"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/TactileData",
+      "hash_string": "RIHS01_bdb531175d9143985a3f54d7a038d9a8ceedce11dfabdf62ca6c69c5d0fb03d3"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/TactileFinger",
+      "hash_string": "RIHS01_4a2b4d6d9f430cd80150a52cf658ab447a04ab1489e7c7593b30574a8e8bf47d"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/TactileRegion",
+      "hash_string": "RIHS01_8bfa62163b0a4dfcbe2a469dc317767274957959791c13e885314187eaf4cee9"
+    }
+  ]
+}

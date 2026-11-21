@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/PoseTactilePositionSample.msg
+// generated code does not contain a copyright notice
+
+#include "omniglove_interfaces/msg/PoseData.idl"
+#include "omniglove_interfaces/msg/StreamMetadata.idl"
+#include "omniglove_interfaces/msg/TactilePositionData.idl"
+
+module omniglove_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "Copyright 2026 Agibot. SPDX-License-Identifier: MulanPSL-2.0")
+    struct PoseTactilePositionSample {
+      omniglove_interfaces::msg::StreamMetadata metadata;
+
+      omniglove_interfaces::msg::PoseData data;
+
+      omniglove_interfaces::msg::TactilePositionData tac_pos;
+    };
+  };
+};

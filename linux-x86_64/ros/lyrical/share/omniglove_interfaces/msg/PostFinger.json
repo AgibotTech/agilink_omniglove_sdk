@@ -1,0 +1,174 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "omniglove_interfaces/msg/PostFinger",
+      "fields": [
+        {
+          "name": "joints_rad",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/PostFingerJoints"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "landmarks",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/PostFingerLandmarks"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "rx_tip_target",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "omniglove_interfaces/msg/Pose6"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "omniglove_interfaces/msg/Pose6",
+        "fields": [
+          {
+            "name": "position_m",
+            "type": {
+              "type_id": 58,
+              "capacity": 3,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "quaternion_xyzw",
+            "type": {
+              "type_id": 58,
+              "capacity": 4,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "omniglove_interfaces/msg/PostFingerJoints",
+        "fields": [
+          {
+            "name": "mcp_abduction",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "mcp_flexion",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "pip_flexion",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "dip_flexion",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "omniglove_interfaces/msg/PostFingerLandmarks",
+        "fields": [
+          {
+            "name": "mcp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/Pose6"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "pip",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/Pose6"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "dip",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/Pose6"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "tip",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "omniglove_interfaces/msg/Pose6"
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "omniglove_interfaces/msg/PostFinger",
+      "hash_string": "RIHS01_9af87473a1bed931e6aca2620ceb1788badf1c3483780ac5dd1dde92a53f08bb"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/Pose6",
+      "hash_string": "RIHS01_3e39efc8d5c0bd8cfdcaee6aafc300e2de628f3474367f1cdbb0aef38b816c49"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/PostFingerJoints",
+      "hash_string": "RIHS01_1731b61d7d96ac1717f1e6126cd870670504529d26fc735ecc0e37e84024018b"
+    },
+    {
+      "type_name": "omniglove_interfaces/msg/PostFingerLandmarks",
+      "hash_string": "RIHS01_13b0a4ad7547de55c216b7945ab93c488a56f204ea41d32b25104efa4796c380"
+    }
+  ]
+}

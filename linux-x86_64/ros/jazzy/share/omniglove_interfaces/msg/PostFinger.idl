@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from omniglove_interfaces/msg/PostFinger.msg
+// generated code does not contain a copyright notice
+
+#include "omniglove_interfaces/msg/Pose6.idl"
+#include "omniglove_interfaces/msg/PostFingerJoints.idl"
+#include "omniglove_interfaces/msg/PostFingerLandmarks.idl"
+
+module omniglove_interfaces {
+  module msg {
+    struct PostFinger {
+      omniglove_interfaces::msg::PostFingerJoints joints_rad;
+
+      omniglove_interfaces::msg::PostFingerLandmarks landmarks;
+
+      omniglove_interfaces::msg::Pose6 rx_tip_target;
+    };
+  };
+};
