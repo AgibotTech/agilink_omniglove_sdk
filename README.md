@@ -7,6 +7,8 @@ architecture. `linux-<arch>/`, `windows-<arch>/`, `macos-<arch>/`, and `android/
 own public header, libraries, installation tools, examples, and platform-specific
 configuration.
 
+Download either archive from [GitHub Releases](https://github.com/AgibotTech/agilink_omniglove_sdk/releases/latest) and extract it for the complete distribution.
+
 ```text
 release/
 ├── README.md                    English release entry (default)
@@ -92,20 +94,74 @@ Windows documentation:
   [stream](docs/en/STREAM_DATA_V1.md), and
   [tactile](docs/en/TACTILE_LAYOUT_V1.md) contracts.
 
-## macOS
+## macOS arm64
 
-When a `macos-<arch>/` package is present, use the directory matching `uname -m`
-on macOS 14 or later. Its README covers the user-local install, C/C++ examples,
-read-only firmware tool, and libusb replacement. macOS users can verify the
-release with `shasum -a 256 -c SHA256SUMS` from the release root.
+### Install and verify
+
+The `macos-arm64/` directory supports Apple Silicon on macOS 14 or later.
+It includes the C API, dynamic libraries, C/C++ examples, and a read-only
+firmware information tool. USB Vendor Bulk streaming uses DIRECT callbacks.
+
+From the extracted distribution, install into your user prefix and build
+the examples with Apple Clang and CMake 3.20 or later.
+
+```bash
+cd macos-arm64
+./install.sh "$HOME/.local"
+cmake -S examples -B build/installed -DCMAKE_PREFIX_PATH="$HOME/.local"
+cmake --build build/installed
+./build/installed/omniglove_c_consumer
+```
+
+Run `./bin/omniglove_firmware_info` with a glove connected to query device
+and firmware information. Applications can use
+`find_package(OmnigloveSDK CONFIG REQUIRED)` and link `OmnigloveSDK::api`.
+Use `shasum -a 256 -c SHA256SUMS` from the distribution root to verify files.
+Hardware validation is pending. [Build information](macos-arm64/BUILD_INFO.txt)
+
+### macOS documentation
+
+- [Platform guide](macos-arm64/README.md) for installation, runtime deployment, and uninstalling.
+- [Dependencies and platform scope](macos-arm64/docs/en/DEPENDENCIES.md) and [libusb replacement](macos-arm64/docs/en/LIBUSB_REBUILD.md).
+- [Public C API](docs/en/PUBLIC_C_API.md), [stream layouts](docs/en/STREAM_DATA_V1.md), and [glove OTA](macos-arm64/docs/en/OTA.md).
 
 ## Android
 
-Copy `android/aar/omniglove-1.0.0.aar` into your app's `libs/` and add
-`implementation(files("libs/omniglove-1.0.0.aar"))`. See the
-[Android guide](android/README.md) for USB authorization, the standalone sample,
-native runtime requirements and libusb replacement. Java/Kotlin consumers use
-the included native libraries without building the core.
+### Integrate and verify
+
+The `android/` directory supports Android 6.0 (API 23) or later on a device
+with USB Host/OTG. The AAR exposes the Java/Kotlin API and bundles native
+libraries for `arm64-v8a`, `armeabi-v7a`, and `x86_64`. It supports DIRECT and
+UDP output.
+
+Copy `android/aar/omniglove-1.0.0.aar` into your app module's `libs/`
+directory and add the dependency to its `build.gradle.kts`.
+
+```kotlin
+dependencies {
+    implementation(files("libs/omniglove-1.0.0.aar"))
+}
+```
+
+Install the included debug APK on an Android device using ADB.
+
+```bash
+cd android
+adb install -r apk/omniglove-sample-debug.apk
+```
+
+Connect a glove over USB OTG, tap **Authorize USB**, grant the Android
+permission, then tap **Start streams**. To build the sample, use JDK 17+
+and Android SDK Platform 35. From `android/examples/sample/`, run
+`./gradlew :app:assembleDebug`. The APK is generated in
+`app/build/outputs/apk/debug/`. Hardware validation is pending.
+[Build information](android/BUILD_INFO.txt)
+
+### Android documentation
+
+- [Platform guide](android/README.md) for AAR integration, the sample app, and native dependencies.
+- [Android API and lifecycle](android/docs/en/ANDROID_API.md) and [libusb replacement](android/docs/en/LIBUSB_REBUILD.md).
+- [Public C API](docs/en/PUBLIC_C_API.md) and [stream layouts](docs/en/STREAM_DATA_V1.md).
 
 ## Read-only firmware information
 
