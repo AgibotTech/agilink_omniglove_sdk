@@ -9,18 +9,17 @@
 发行根目录只保存跨平台资料和全仓元数据；平台使用说明及依赖说明跟随对应
 平台产品：
 
-在 [GitHub Releases](https://github.com/AgibotTech/agilink_omniglove_sdk/releases/latest) 下载并解压任一完整发行压缩包，再进入对应平台目录。
-
 ```text
 release/
 ├── README.md                    默认英文入口
 ├── README_CN.md                 中文入口
 ├── VERSION
 ├── SHA256SUMS
-├── docs/                        跨平台公开 API 与数据布局文档
+├── docs/                        跨平台公开文档与配件资料
 │   ├── en/                      默认英文文档
 │   ├── cn/                      一一对应的中文文档
-│   └── pic/                     双语文档共享图片资源
+│   ├── pic/                     双语文档共享图片资源
+│   └── pico-controller-mount/   参考图片与 STEP 模型
 ├── linux-<arch>/                Linux 平台产品
 ├── windows-<arch>/              Windows 平台产品
 ├── macos-<arch>/                macOS 平台产品
@@ -32,6 +31,10 @@ Windows 提供 `windows-x86_64/`。进入对应目录可查看平台包结构和
 能力以对应平台的 `BUILD_INFO.txt`、公开头文件和平台 README 为准。Linux 提供 DIRECT 与
 UDP；Windows 和 macOS 提供 DIRECT 输出。
 Android 支持 API 23+、arm64-v8a/armeabi-v7a/x86_64，提供 DIRECT 与 UDP。
+
+手套上盖转接件的零件清单、参考图片和 STEP 模型见
+[PICO 手柄转接支架](docs/pico-controller-mount/README_CN.md)。
+
 在本目录运行以下命令可校验公共资料和所有平台产物：
 
 ```bash
@@ -107,70 +110,18 @@ cmake --build ./build/omniglove-consumer
 - [IK 解算数据描述](docs/cn/IK_DATA_DESCRIPTION.md) /
   [触觉点位映射图片](docs/cn/TACTILE_POINT_MAPPING_IMAGES.md)。
 
-## macOS arm64
+## macOS
 
-### 安装和验证
-
-`macos-arm64/` 适用于运行 macOS 14 或更高版本的 Apple Silicon Mac。目录包含公开
-C API、动态库、C/C++ 示例和只读固件查询工具。通过 USB Vendor Bulk 连接时，数据流
-以 DIRECT 回调输出。
-
-在解压后的发行根目录进入平台目录，安装到用户目录，再使用 Apple Clang 和 CMake 3.20
-或更高版本构建示例。
-
-```bash
-cd macos-arm64
-./install.sh "$HOME/.local"
-cmake -S examples -B build/installed -DCMAKE_PREFIX_PATH="$HOME/.local"
-cmake --build build/installed
-./build/installed/omniglove_c_consumer
-```
-
-连接手套后，可运行 `./bin/omniglove_firmware_info` 查询设备和固件信息。业务工程可用
-`find_package(OmnigloveSDK CONFIG REQUIRED)` 并链接 `OmnigloveSDK::api`。
-在发行根目录运行 `shasum -a 256 -c SHA256SUMS` 可校验文件。
-实机验证仍待完成。[构建信息](macos-arm64/BUILD_INFO.txt)
-
-### macOS 文档
-
-- [macOS 完整使用说明](macos-arm64/README_CN.md)，包含安装、运行时部署和卸载。
-- [依赖和平台范围](macos-arm64/docs/cn/DEPENDENCIES.md)和 [libusb 重建与替换](macos-arm64/docs/cn/LIBUSB_REBUILD.md)。
-- [公开 C API](docs/cn/PUBLIC_C_API.md)、[数据流 layout](docs/cn/STREAM_DATA_V1.md)和 [手套 OTA](macos-arm64/docs/cn/OTA.md)。
+发行仓包含 `macos-<arch>/` 时，在 macOS 14 或更高版本上进入与 `uname -m` 对应的目录。
+平台 README 说明用户目录安装、C/C++ 示例、只读固件查询与 libusb 替换。
+可在发行根目录用 `shasum -a 256 -c SHA256SUMS` 校验各平台产物。
 
 ## Android
 
-### 接入和验证
-
-`android/` 适用于支持 USB Host/OTG 的 Android 6.0（API 23）或更高版本设备。
-AAR 提供 Java/Kotlin API，内含 `arm64-v8a`、`armeabi-v7a` 和 `x86_64` 原生库，
-支持 DIRECT 和 UDP 输出。
-
-将 `android/aar/omniglove-1.0.0.aar` 复制到应用模块的 `libs/`，在该模块的
-`build.gradle.kts` 中添加依赖。
-
-```kotlin
-dependencies {
-    implementation(files("libs/omniglove-1.0.0.aar"))
-}
-```
-
-在 Android 设备上使用 ADB 安装随包提供的调试示例 APK。
-
-```bash
-cd android
-adb install -r apk/omniglove-sample-debug.apk
-```
-
-通过 USB OTG 连接手套，在应用中点击 **Authorize USB** 并授予系统权限，再点击
-**Start streams**。如需从源码构建示例，请准备 JDK 17 或更高版本及 Android SDK
-Platform 35，在 `android/examples/sample/` 下执行 `./gradlew :app:assembleDebug`。
-APK 输出到 `app/build/outputs/apk/debug/`。实机验证仍待完成。[构建信息](android/BUILD_INFO.txt)
-
-### Android 文档
-
-- [Android 完整使用说明](android/README_CN.md)，包含 AAR 接入、示例和原生依赖。
-- [Android API 和生命周期](android/docs/cn/ANDROID_API.md)及 [libusb 重建与替换](android/docs/cn/LIBUSB_REBUILD.md)。
-- [公开 C API](docs/cn/PUBLIC_C_API.md)和 [数据流 layout](docs/cn/STREAM_DATA_V1.md)。
+将 `android/aar/omniglove-1.0.0.aar` 复制到应用的 `libs/`，添加
+`implementation(files("libs/omniglove-1.0.0.aar"))`。USB 授权、独立示例、native runtime
+要求与 libusb 替换见 [Android 使用说明](android/README_CN.md)。Java/Kotlin 应用直接
+使用 AAR 内置 native 库，无需重建核心。
 
 ## 只读设备信息查询
 

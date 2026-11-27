@@ -12,3 +12,4 @@ CMakeLists.txt text eol=lf
 SHA256SUMS text eol=lf
 VERSION text eol=lf
 windows-*/BUILD_INFO.txt text eol=crlf
+docs/pico-controller-mount/models/*.step -diff

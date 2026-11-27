@@ -44,6 +44,6 @@ if(NOT COMMAND omniglove_sdk_deploy_runtime)
     endfunction()
 endif()
 
-set(OmnigloveSDK_VERSION "1.0.0")
+set(OmnigloveSDK_VERSION "1.0.1")
 set(OmnigloveSDK_ABI_VERSION "6.0.0")
 set(OmnigloveSDK_FOUND TRUE)

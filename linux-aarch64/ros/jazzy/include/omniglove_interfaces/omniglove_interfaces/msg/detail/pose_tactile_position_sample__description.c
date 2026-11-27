@@ -23,18 +23,18 @@ omniglove_interfaces__msg__PoseTactilePositionSample__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "std_msgs/msg/detail/header__functions.h"
-#include "omniglove_interfaces/msg/detail/pose_emf__functions.h"
+#include "omniglove_interfaces/msg/detail/pose_node__functions.h"
+#include "omniglove_interfaces/msg/detail/tactile_point_position__functions.h"
 #include "omniglove_interfaces/msg/detail/pose_data__functions.h"
+#include "builtin_interfaces/msg/detail/time__functions.h"
+#include "omniglove_interfaces/msg/detail/tactile_region__functions.h"
+#include "std_msgs/msg/detail/header__functions.h"
 #include "omniglove_interfaces/msg/detail/pose_imu__functions.h"
 #include "omniglove_interfaces/msg/detail/tactile_data__functions.h"
-#include "omniglove_interfaces/msg/detail/stream_metadata__functions.h"
-#include "omniglove_interfaces/msg/detail/tactile_point_position__functions.h"
 #include "omniglove_interfaces/msg/detail/tactile_position_data__functions.h"
-#include "builtin_interfaces/msg/detail/time__functions.h"
-#include "omniglove_interfaces/msg/detail/pose_node__functions.h"
-#include "omniglove_interfaces/msg/detail/tactile_region__functions.h"
+#include "omniglove_interfaces/msg/detail/stream_metadata__functions.h"
 #include "omniglove_interfaces/msg/detail/tactile_finger__functions.h"
+#include "omniglove_interfaces/msg/detail/pose_emf__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

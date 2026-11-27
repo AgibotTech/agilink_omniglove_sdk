@@ -26,15 +26,15 @@ omniglove_interfaces__msg__PostSample__get_type_hash(
 #include "omniglove_interfaces/msg/detail/pose6__functions.h"
 #include "omniglove_interfaces/msg/detail/post_thumb_landmarks__functions.h"
 #include "omniglove_interfaces/msg/detail/post_data__functions.h"
-#include "omniglove_interfaces/msg/detail/post_thumb__functions.h"
-#include "omniglove_interfaces/msg/detail/post_wrist__functions.h"
-#include "omniglove_interfaces/msg/detail/post_thumb_joints__functions.h"
-#include "std_msgs/msg/detail/header__functions.h"
 #include "omniglove_interfaces/msg/detail/post_finger_joints__functions.h"
 #include "builtin_interfaces/msg/detail/time__functions.h"
-#include "omniglove_interfaces/msg/detail/stream_metadata__functions.h"
 #include "omniglove_interfaces/msg/detail/post_finger_landmarks__functions.h"
+#include "omniglove_interfaces/msg/detail/post_wrist__functions.h"
+#include "std_msgs/msg/detail/header__functions.h"
 #include "omniglove_interfaces/msg/detail/post_finger__functions.h"
+#include "omniglove_interfaces/msg/detail/post_thumb_joints__functions.h"
+#include "omniglove_interfaces/msg/detail/post_thumb__functions.h"
+#include "omniglove_interfaces/msg/detail/stream_metadata__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

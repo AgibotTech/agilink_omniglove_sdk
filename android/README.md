@@ -21,10 +21,10 @@ android/
 
 ## Quick start
 
-Copy `aar/omniglove-1.0.0.aar` into your application's `app/libs/`:
+Copy `aar/omniglove-1.0.1.aar` into your application's `app/libs/`:
 
 ```kotlin
-dependencies { implementation(files("libs/omniglove-1.0.0.aar")) }
+dependencies { implementation(files("libs/omniglove-1.0.1.aar")) }
 ```
 
 The AAR includes `libomniglove.so`, replaceable `libusb-1.0.so`, and

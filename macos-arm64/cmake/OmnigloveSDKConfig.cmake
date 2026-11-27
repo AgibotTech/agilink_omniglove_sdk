@@ -45,7 +45,7 @@ function(omniglove_sdk_deploy_runtime target_name)
         VERBATIM)
 endfunction()
 
-set(OmnigloveSDK_VERSION "1.0.0")
+set(OmnigloveSDK_VERSION "1.0.1")
 set(OmnigloveSDK_ABI_VERSION "6.0.0")
 unset(_required)
 unset(_omniglove_libusb)
