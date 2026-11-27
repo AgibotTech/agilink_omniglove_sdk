@@ -23,12 +23,12 @@ omniglove_interfaces__msg__PoseData__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "omniglove_interfaces/msg/detail/pose_emf__functions.h"
+#include "omniglove_interfaces/msg/detail/pose_node__functions.h"
+#include "omniglove_interfaces/msg/detail/tactile_region__functions.h"
 #include "omniglove_interfaces/msg/detail/pose_imu__functions.h"
 #include "omniglove_interfaces/msg/detail/tactile_data__functions.h"
-#include "omniglove_interfaces/msg/detail/tactile_region__functions.h"
-#include "omniglove_interfaces/msg/detail/pose_node__functions.h"
 #include "omniglove_interfaces/msg/detail/tactile_finger__functions.h"
+#include "omniglove_interfaces/msg/detail/pose_emf__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

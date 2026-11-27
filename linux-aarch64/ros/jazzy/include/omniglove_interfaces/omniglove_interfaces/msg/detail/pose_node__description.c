@@ -23,8 +23,8 @@ omniglove_interfaces__msg__PoseNode__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "omniglove_interfaces/msg/detail/pose_emf__functions.h"
 #include "omniglove_interfaces/msg/detail/pose_imu__functions.h"
+#include "omniglove_interfaces/msg/detail/pose_emf__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

@@ -20,10 +20,10 @@ android/
 
 ## 快速接入
 
-把 `aar/omniglove-1.0.0.aar` 复制到应用的 `app/libs/`：
+把 `aar/omniglove-1.0.1.aar` 复制到应用的 `app/libs/`：
 
 ```kotlin
-dependencies { implementation(files("libs/omniglove-1.0.0.aar")) }
+dependencies { implementation(files("libs/omniglove-1.0.1.aar")) }
 ```
 
 AAR 已包含 `libomniglove.so`、独立可替换的 `libusb-1.0.so` 和 `libc++_shared.so`。

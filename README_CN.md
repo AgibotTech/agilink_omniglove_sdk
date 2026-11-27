@@ -9,7 +9,7 @@
 发行根目录只保存跨平台资料和全仓元数据；平台使用说明及依赖说明跟随对应
 平台产品：
 
-在 [GitHub Releases](https://github.com/AgibotTech/agilink_omniglove_sdk/releases/latest) 下载并解压任一完整发行压缩包，再进入对应平台目录。
+在 [Omniglove SDK v1.0.1](https://github.com/AgibotTech/agilink_omniglove_sdk/releases/tag/v1.0.1) 下载并解压 ZIP 或 tar.gz 发行包，再进入对应平台目录。
 
 ```text
 release/
@@ -17,10 +17,11 @@ release/
 ├── README_CN.md                 中文入口
 ├── VERSION
 ├── SHA256SUMS
-├── docs/                        跨平台公开 API 与数据布局文档
+├── docs/                        跨平台公开文档与配件资料
 │   ├── en/                      默认英文文档
 │   ├── cn/                      一一对应的中文文档
-│   └── pic/                     双语文档共享图片资源
+│   ├── pic/                     双语文档共享图片资源
+│   └── pico-controller-mount/   参考图片与 STEP 模型
 ├── linux-<arch>/                Linux 平台产品
 ├── windows-<arch>/              Windows 平台产品
 ├── macos-<arch>/                macOS 平台产品
@@ -32,6 +33,10 @@ Windows 提供 `windows-x86_64/`。进入对应目录可查看平台包结构和
 能力以对应平台的 `BUILD_INFO.txt`、公开头文件和平台 README 为准。Linux 提供 DIRECT 与
 UDP；Windows 和 macOS 提供 DIRECT 输出。
 Android 支持 API 23+、arm64-v8a/armeabi-v7a/x86_64，提供 DIRECT 与 UDP。
+
+手套上盖转接件的零件清单、参考图片和 STEP 模型见
+[PICO 手柄转接支架](docs/pico-controller-mount/README_CN.md)。
+
 在本目录运行以下命令可校验公共资料和所有平台产物：
 
 ```bash
@@ -145,12 +150,12 @@ cmake --build build/installed
 AAR 提供 Java/Kotlin API，内含 `arm64-v8a`、`armeabi-v7a` 和 `x86_64` 原生库，
 支持 DIRECT 和 UDP 输出。
 
-将 `android/aar/omniglove-1.0.0.aar` 复制到应用模块的 `libs/`，在该模块的
+将 `android/aar/omniglove-1.0.1.aar` 复制到应用模块的 `libs/`，在该模块的
 `build.gradle.kts` 中添加依赖。
 
 ```kotlin
 dependencies {
-    implementation(files("libs/omniglove-1.0.0.aar"))
+    implementation(files("libs/omniglove-1.0.1.aar"))
 }
 ```
 

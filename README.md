@@ -7,7 +7,7 @@ architecture. `linux-<arch>/`, `windows-<arch>/`, `macos-<arch>/`, and `android/
 own public header, libraries, installation tools, examples, and platform-specific
 configuration.
 
-Download either archive from [GitHub Releases](https://github.com/AgibotTech/agilink_omniglove_sdk/releases/latest) and extract it for the complete distribution.
+Download [Omniglove SDK v1.0.1](https://github.com/AgibotTech/agilink_omniglove_sdk/releases/tag/v1.0.1) as a ZIP or tar.gz archive for the complete distribution.
 
 ```text
 release/
@@ -18,7 +18,8 @@ release/
 ├── docs/
 │   ├── en/                      English cross-platform documents
 │   ├── cn/                      matching Chinese documents
-│   └── pic/                     language-neutral images
+│   ├── pic/                     language-neutral images
+│   └── pico-controller-mount/   reference images and STEP models
 ├── linux-<arch>/
 ├── windows-<arch>/
 ├── macos-<arch>/
@@ -30,6 +31,9 @@ is `windows-x86_64/`. Use each platform's `BUILD_INFO.txt`, public header, and
 README as the version and capability source. Linux provides DIRECT and UDP.
 Windows and macOS provide DIRECT output.
 Android provides DIRECT and UDP for API 23+ on arm64-v8a, armeabi-v7a and x86_64.
+
+See the [PICO controller mount](docs/pico-controller-mount/README.md) for the
+parts list, reference images, and STEP models for the glove top cover.
 
 Verify all shared and platform files from the release root:
 
@@ -134,12 +138,12 @@ with USB Host/OTG. The AAR exposes the Java/Kotlin API and bundles native
 libraries for `arm64-v8a`, `armeabi-v7a`, and `x86_64`. It supports DIRECT and
 UDP output.
 
-Copy `android/aar/omniglove-1.0.0.aar` into your app module's `libs/`
+Copy `android/aar/omniglove-1.0.1.aar` into your app module's `libs/`
 directory and add the dependency to its `build.gradle.kts`.
 
 ```kotlin
 dependencies {
-    implementation(files("libs/omniglove-1.0.0.aar"))
+    implementation(files("libs/omniglove-1.0.1.aar"))
 }
 ```
 

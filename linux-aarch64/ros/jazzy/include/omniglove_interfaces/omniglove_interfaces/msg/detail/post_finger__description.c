@@ -23,9 +23,9 @@ omniglove_interfaces__msg__PostFinger__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "omniglove_interfaces/msg/detail/post_finger_joints__functions.h"
-#include "omniglove_interfaces/msg/detail/post_finger_landmarks__functions.h"
 #include "omniglove_interfaces/msg/detail/pose6__functions.h"
+#include "omniglove_interfaces/msg/detail/post_finger_landmarks__functions.h"
+#include "omniglove_interfaces/msg/detail/post_finger_joints__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

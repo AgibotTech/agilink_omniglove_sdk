@@ -9,7 +9,7 @@
 # See the Mulan PSL v2 for more details.
 # SPDX-License-Identifier: MulanPSL-2.0
 
-set(PACKAGE_VERSION "1.0.0")
+set(PACKAGE_VERSION "1.0.1")
 
 if(PACKAGE_FIND_VERSION VERSION_GREATER PACKAGE_VERSION)
     set(PACKAGE_VERSION_COMPATIBLE FALSE)

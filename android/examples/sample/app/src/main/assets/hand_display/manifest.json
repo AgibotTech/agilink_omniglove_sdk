@@ -2,17 +2,17 @@
   "schema_version": 1,
   "source": "OmniGlove Toolbox hand_runtime",
   "source_sha256": {
-    "assets/tactile/tactile_left.json": "67cf6a0222b2c09cd85a997adbc691fea697818d8de32f73095a5bc44e3b4815",
+    "assets/tactile/tactile_left.json": "9c736cbd2d7a74bb268729f6dff30ea8a6f60b81e705ae9ce8358c4d33dbe363",
     "bone_urdf_bp3d/left_bone_bp3d/model.urdf": "4c8984613c37dacec6f5a35c56310a68325de1049e9022d7b2be00e61678dd9e",
     "code_glove/ik_constraints.json": "2ff3eb18a61f090ff5de7dd3d953564ff3c5b843339c9d4f0ac7fae7f6b4d92f",
-    "assets/tactile/tactile_right.json": "f3e4fe5e07ea83e9f9b5452f140061e26b2bed071c88455bd57f69f9da5d6826",
+    "assets/tactile/tactile_right.json": "a31749901059583d88c043cb4a3c2e0f447458d0bd30d73aaa3ea17922db9c89",
     "bone_urdf_bp3d/right_bone_bp3d/model.urdf": "68c0bbbc641524b4b8e8255b2f5d8d4c07d4f94636419996760d8a7b4a2be8cc",
     "code_glove/ik_constraints_right.json": "2ff3eb18a61f090ff5de7dd3d953564ff3c5b843339c9d4f0ac7fae7f6b4d92f"
   },
   "generated_sha256": {
     "pose_left.bin": "5be8521f4be7f00da5c1e08a4ec2d9f14537657077dcc35d3fe2e37394932703",
     "pose_right.bin": "d4226fc45a80c500e07b59ddf1b39d56abf04b71a24941d43b9e1475e8758567",
-    "tactile_left.bin": "0c0d1c136c1822425ed378c2ae63801f6cc2650a27b7c6d689fcec104ae714cf",
-    "tactile_right.bin": "20d90da86e0d457c2b8df6804cd73e2f3114d2503ffd1862a81450ca565a9cda"
+    "tactile_left.bin": "e2edf11158171eca7425b4cce67d6edae7c04645e0391dddb6d2720bb0a075a5",
+    "tactile_right.bin": "9d1a49214415ca3793b4164706c7c3df6e21c7708e5b2538cffabf4ac56fc809"
   }
 }

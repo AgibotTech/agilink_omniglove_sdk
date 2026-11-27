@@ -1,10 +1,10 @@
 # Optional Android hand display data
 
-The tactile JSON files are copied unchanged from OmniGlove Toolbox's
-`hand_runtime/assets/tactile/`, using schema 2, metres, and the stable 746-channel
-SDK order. HTAC v1 stores the same points and landmark bindings in little-endian
-float32 form. Palm points already contain the nominal wrist-frame rotation;
-finger points retain their landmark-local frame.
+The tactile JSON files match the SDK algorithm assets, using schema 2, metres,
+and the stable 746-channel SDK order. Both thumb modules use the supplier CAD
+registration verified in OmniGlove Toolbox. HTAC v1 stores the same points and
+landmark bindings in little-endian float32 form. Palm points already contain the
+nominal wrist-frame rotation. Finger points retain their landmark-local frame.
 
 HKIN v1 contains only the nominal URDF finger chains and toolbox IK constraints,
 in little-endian float64 form. It contains no personal calibration. The demo
@@ -21,6 +21,8 @@ Converged bounded fits remain visible as in toolbox; a positional residual of
 holds the previous pose and reports its cause.
 
 Regenerate with `scripts/generate_android_hand_assets.py --reference-root
-<toolbox-hand-runtime> --output <this-directory>`. The manifest records the exact
-source and generated SHA-256 hashes. These display resources belong only to the
-optional demo. Bone mesh attribution remains in `../hand_bones/`.
+<reference-hand-runtime> --output <this-directory>`. Use the Toolbox URDF and IK
+constraints with the SDK algorithm JSON files under `assets/tactile/` in that
+reference root. The manifest records the source and generated SHA-256 hashes.
+These display resources belong only to the optional demo. Bone mesh attribution
+remains in `../hand_bones/`.
